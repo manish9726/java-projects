@@ -1,5 +1,11 @@
 package lti.bank;
 
+/**
+ * This class represents generalized bank account
+ * 
+ * @author Manish'} Prasanna
+ * @version 1.0
+ */
 public abstract class Account implements Bank {
 
 	private int acntNo;
@@ -8,8 +14,10 @@ public abstract class Account implements Bank {
 
 	private static int autogen = INIT_ACNT_NO;
 
-	protected Transactions[] txns;// ?
+	protected Transactions[] txns;
+	protected CurrentTranscations[] crrtxns;// ?
 	protected int idx;
+	protected int idxx;
 
 	public Account() {
 	}
@@ -20,6 +28,7 @@ public abstract class Account implements Bank {
 		this.balance = balance;
 		// Instantiating transaction array for the account
 		txns = new Transactions[10];
+		crrtxns = new CurrentTranscations[10];
 		// Adding opening account transaction
 		txns[idx++] = new Transactions("08", balance, balance);
 	}

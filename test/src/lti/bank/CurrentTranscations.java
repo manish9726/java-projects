@@ -2,16 +2,16 @@ package lti.bank;
 
 public class CurrentTranscations extends Transactions {
 
-	private String type;
-	private double amount, balance;
 	private double overdraft;
 
 	public CurrentTranscations() {
 
 	}
 
-	public CurrentTranscations(String type, double amount, double balance) {
+	public CurrentTranscations(String type, double amount, double balance, double overdraft) {
 		super(type, amount, balance);
+		this.overdraft = overdraft;
+
 	}
 
 	public String toString() {

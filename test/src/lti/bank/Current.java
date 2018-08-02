@@ -34,6 +34,7 @@ public class Current extends Account {
 				overdraft += balance;
 				balance = MIN_CUR_BAL;
 			}
+			crrtxns[idxx++] = new CurrentTranscations("Drr", amount, balance, overdraft);
 
 		}
 

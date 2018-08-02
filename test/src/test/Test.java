@@ -2,6 +2,7 @@ package test;
 
 import lti.bank.AccountFactory;
 import lti.bank.Bank;
+import lti.bank.Current;
 
 public class Test {
 
@@ -14,7 +15,15 @@ public class Test {
 		sav.withdraw(3000);
 		sav.withdraw(7000);
 		sav.statement();
-
+          
+		
+		Current curr=new Current("Phill");
+		curr.summary();
+		curr.deposit(2000);
+		curr.deposit(4000);
+		curr.withdraw(3000);
+		curr.withdraw(7000);
+		curr.statement();
 		// Account ac = new Account("Polo",5000);
 		// ac.summary();
 		//
