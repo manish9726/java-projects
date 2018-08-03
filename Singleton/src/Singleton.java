@@ -1,4 +1,4 @@
 
-public class MySingleton {
+public class Singleton {
 
 }
