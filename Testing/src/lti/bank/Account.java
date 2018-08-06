@@ -1,5 +1,7 @@
 package lti.bank;
 
+import java.util.Vector;
+
 /**
  * This class represents generalized bank account
  * 
@@ -14,7 +16,8 @@ public abstract class Account implements Bank {
 
 	private static int autogen = INIT_ACNT_NO;
 
-	protected Transactions[] txns;
+	//protected Transactions[] txns;
+	protected Vector<Transactions> txns;
 	
 	protected int idx;
 	protected int idxx;
@@ -27,7 +30,7 @@ public abstract class Account implements Bank {
 		this.holder = holder;
 		this.balance = balance;
 		// Instantiating transaction array for the account
-		txns = new Transactions[10];
+		txns = new Vector<>();
 	
 		// Adding opening account transaction
 		
@@ -47,7 +50,9 @@ public abstract class Account implements Bank {
 	public void deposit(double amount) {
 
 		balance += amount;
-		txns[idx++] = new Transactions("Cr", amount, balance); // ?
+		//txns[idx++] = new Transactions("Cr", amount, balance); // ?
+		
+		txns.add(new Transactions("Cr", amount, balance));
 	}
 
 	// public abstract void withdraw(double amount);
@@ -56,6 +61,6 @@ public abstract class Account implements Bank {
 
 		System.out.println("Statement of A/C: " + acntNo);
 		for (int i = 0; i < idx; i++)
-			System.out.println(txns[i]);
+			System.out.println(txns.get(i));
 	}
 }

@@ -7,7 +7,9 @@ public class Current extends Account {
 	public Current(String holder) {
 		super(holder, INIT_CUR_BAL);
 		this.overdraft = OVERDRAFT_AMT;
-		txns[idx++] = new CurrentTranscations("08", balance, balance,overdraft);
+		//txns[idx++] = new CurrentTranscations("08", balance, balance,overdraft);
+		
+		txns.add(new CurrentTranscations("08", balance, balance,overdraft));
 	}
 
 	@Override
@@ -25,7 +27,8 @@ public class Current extends Account {
 			balance += overdraft - OVERDRAFT_AMT;
 			overdraft = OVERDRAFT_AMT;
 		}
-		txns[idx++] = new CurrentTranscations("08", balance, balance,overdraft);
+		//txns[idx++] = new CurrentTranscations("08", amount, balance,overdraft);
+		txns.add(new CurrentTranscations("08", amount, balance,overdraft));
 	}
 
 	@Override
@@ -36,7 +39,8 @@ public class Current extends Account {
 				overdraft += balance;
 				balance = MIN_CUR_BAL;
 			}
-			txns[idxx++] = new CurrentTranscations("Drr", amount, balance, overdraft);
+			//txns[idxx++] = new CurrentTranscations("Drr", amount, balance, overdraft);
+			txns.add(new CurrentTranscations("Drr", amount, balance, overdraft));
 
 		}
 
