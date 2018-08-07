@@ -6,16 +6,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Forget Page</title>
 </head>
-<body bgcolor="red">
+<body bgcolor="weed">
+<div align="center">
 <h1>Forget Password Page</h1>
 <form name="loginform" method ="get">
     <label>User Name:</label>
-    <input type="email" name="usr" placeholder="username"> <br><br><br>
+    <input type="email" name="usr" placeholder="username"> <br><br>
     <label>What is your favourite movie?</label>
     <input type="text" name="movie" placeholder="movie name"><br><br>
     <input type="submit" value="Submit" />
+    
+    
+ <%-- 
+    <label>Enter new Password</label>
+    <input type="password" name="password" placeholder="password"> <br><br><br>
+    <label>Confirm Password</label>
+    <input type="password" name="password" placeholder="confirm password"> <br><br><br>
+    --%>
 
 </form>
-
+</div>
 </body>
 </html>

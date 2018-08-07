@@ -6,7 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Home Page</title>
 </head>
-<body bgcolor="grey">
+<body  bgcolor="grey">
+<div align="center">
 
 <h1>Home Page</h1>
 <form name="loginform" method ="get">
@@ -15,9 +16,10 @@
     <input type="password" name="pword" placeholder="password"><br><br>
     <input type="submit" value="Login" />
     
-    <a href="">Forget Password?</a><br><br>
-    <a href="">New User? Register</a>
-</form>
+    <a href="forget.jsp">Forget Password?</a><br><br>
+    <a href="register.jsp">New User? Register</a>
+    </form>
+</div>
 
 
 </body>

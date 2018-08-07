@@ -7,45 +7,48 @@
 <title>Registration Page</title>
 </head>
 <body bgcolor="yellow">
+<div align="center">
+
+<h1>Register Yourself </h1>
 	<form action="/signup" method="POST">
   
   <p>
     <label> Name</label>
-    <input type="text"  placeholder="Name">
+    <input type="text" name="name"  placeholder="Name">
   </p>
   
   <p>
     <label>Email</label>
-    <input type="email"  placeholder="email">
+    <input type="email" name="email_id" placeholder="email">
   </p>
   <p>
     <label>Password</label>
-    <input type="password"  placeholder="password" pattern=[A-Za-z0-9]{8,20}>
+    <input type="password" name ="password" placeholder="password" pattern=[A-Za-z0-9]{8,20}>
   </p>
   <p>
     <label>Age</label>
-    <input type="number" placeholder="age">
+    <input type="number" name="age" placeholder="age">
   </p>
   <p>
     <label>Gender</label>
-    <select>
-      <option>Male</option>
-      <option>Female</option>
-      <option>Others</option>
+    <select name="gender">
+      <option value="Male" >Male</option>
+      <option value="Female">Female</option>
+      <option value="Others">Others</option>
     </select>
   </p>
  <p>
     <label>City</label>
-    <input type="text"  placeholder="city">
+    <input type="text" name="city"  placeholder="city">
   </p>
   <p>
     <label>Favourite movie name</label>
-    <input type="movie"  placeholder="movie name">
+    <input type="text" name="movie" placeholder="movie name">
   </p>
   
   <p>
   <label>Upload Profile photo</label>
-  <input type="file" name="pic" accept="image/*">
+  <input type="file" name="photo" accept="image/*">
   </p>
   <p>
     <button>
@@ -53,5 +56,6 @@
     </button>
   </p>
 </form>
+</div>
 </body>
 </html>
