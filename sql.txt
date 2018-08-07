@@ -1,0 +1,11 @@
+create table users
+(
+name varchar2(100),
+email varchar2(100) primary key,
+password varchar2(100),
+age number,
+gender varchar2(20),
+city varchar2(100),
+movie varchar2(100),
+photo varchar2(100)
+)
